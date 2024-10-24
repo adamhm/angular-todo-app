@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  font:
+    400 18px / 1.5 "Josefin Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+main {
+  height: 100vh;
+}
+
+input {
+  font-family: inherit;
+}

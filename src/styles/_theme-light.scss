@@ -1,0 +1,43 @@
+$veryLightGray: hsl(0, 0%, 98%);
+$veryLightGrayishBlue: hsl(236, 33%, 92%);
+$lightGrayishBlue: hsl(233, 11%, 84%);
+$darkGrayishBlue: hsl(236, 9%, 61%);
+$veryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+$theme: (
+  App: (
+    bg-image: url("/assets/images/bg-desktop-light.jpg"),
+    bg-color: $veryLightGray
+  ),
+  Checkbox: (
+    border-color: $lightGrayishBlue,
+    border-color-hover: hsl(219, 71%, 57%)
+  ),
+  ListFooter: (
+    bg-color: white,
+    text-color: $darkGrayishBlue,
+    text-hover: $veryDarkGrayishBlue,
+    separator: $lightGrayishBlue
+  ),
+  ListFilter: (
+    text-hover: $veryDarkGrayishBlue
+  ),
+  TextBox: (
+    bg-color: white,
+    text-color: $veryDarkGrayishBlue
+  ),
+  TodoFilter: (
+    bg-color: white,
+    text-color: $darkGrayishBlue
+  ),
+  TodoList: (
+    bg-color: white,
+    scrollbar-color: hsla(273, 73%, 64%, 0.5) transparent,
+    scrollbar-bg: hsla(273, 73%, 64%, 0.5)
+  ),
+  TodoElement: (
+    text-active: $veryDarkGrayishBlue,
+    text-completed: $lightGrayishBlue,
+    separator: $lightGrayishBlue
+  )
+);
