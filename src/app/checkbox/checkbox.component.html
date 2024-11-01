@@ -1,0 +1,5 @@
+<div class="Checkbox" [class]="themeService.theme$ | async">
+  <input type="checkbox" [checked]="checked" [disabled]="disabled" (change)="handleChange(checkbox.checked)"
+    [attr.aria-labelledby]="labelId" #checkbox />
+  <span></span>
+</div>

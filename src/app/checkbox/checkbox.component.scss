@@ -1,0 +1,100 @@
+@import "../../styles/themify";
+
+$boxSize: 24px;
+$boxSize-mobile: 20px;
+
+%checkboxBase {
+  position: absolute;
+  left: $boxSize;
+  width: $boxSize;
+  height: $boxSize;
+  border-radius: 50%;
+}
+
+.Checkbox {
+  position: relative;
+  width: 72px;
+
+  [type="checkbox"] {
+    @extend %checkboxBase;
+    -webkit-appearance: none;
+    appearance: none;
+    z-index: 1;
+
+    &:checked + span::after {
+      @extend %checkboxBase;
+      content: "";
+      background:
+        url("/assets/icons/icon-check.svg") 7px 7px no-repeat,
+        linear-gradient(to bottom right, hsl(208, 99%, 71%), hsl(270, 100%, 74%));
+    }
+  }
+
+  span {
+    display: block;
+    height: $boxSize;
+    position: relative;
+
+    &::before {
+      @extend %checkboxBase;
+      content: "";
+    }
+  }
+}
+
+.light {
+  span::before {
+    border: 1px solid getThemedValue(light, Checkbox, border-color);
+  }
+}
+
+.dark {
+  span::before {
+    border: 1px solid getThemedValue(dark, Checkbox, border-color);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .light {
+    [type="checkbox"]:not(:disabled):hover + span::before {
+      border-color: getThemedValue(light, Checkbox, border-color-hover);
+    }
+  }
+
+  .dark {
+    [type="checkbox"]:not(:disabled):hover + span::before {
+      border-color: getThemedValue(dark, Checkbox, border-color-hover);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  %checkboxBase-mobile {
+    left: $boxSize-mobile;
+    width: $boxSize-mobile;
+    height: $boxSize-mobile;
+  }
+
+  .Checkbox {
+    width: 53px;
+
+    [type="checkbox"] {
+      @extend %checkboxBase-mobile;
+
+      &:checked + span::after {
+        @extend %checkboxBase-mobile;
+        background:
+          url("/assets/icons/icon-check.svg") 5px 5px no-repeat,
+          linear-gradient(to bottom right, hsl(208, 99%, 71%), hsl(270, 100%, 74%));
+      }
+    }
+
+    span {
+      height: $boxSize-mobile;
+
+      &::before {
+        @extend %checkboxBase-mobile;
+      }
+    }
+  }
+}
