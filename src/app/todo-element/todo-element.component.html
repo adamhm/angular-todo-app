@@ -1,0 +1,9 @@
+<li class="TodoElement" [class]="themeService.theme$ | async">
+  <app-checkbox [checked]="todo.completed" [labelId]="todo.id.toString()" (checkedChange)="handleChange($event)" />
+  <p [class]="todo.completed ? 'completed': 'active'">
+    {{todo.task}}
+  </p>
+  <button type="button" title="remove todo" aria-label="remove todo" (click)="removeTodo()">
+    <img src="/assets/icons/icon-cross.svg" alt="" />
+  </button>
+</li>

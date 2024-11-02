@@ -1,0 +1,81 @@
+@import "../../styles/themify";
+@import "../../styles/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 $element-size;
+
+  &.noborder li {
+    border-bottom: none;
+  }
+}
+
+.TodoElement {
+  padding-right: 24px;
+  display: flex;
+  align-items: center;
+  flex: 0 0 $element-size;
+  background-color: transparent;
+  list-style: none;
+
+  p.completed {
+    text-decoration: line-through;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    opacity: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  &:hover button,
+  button:focus-visible {
+    opacity: 1;
+  }
+}
+
+.light {
+  border-bottom: 1px solid getThemedValue(light, TodoElement, separator);
+
+  p.active {
+    color: getThemedValue(light, TodoElement, text-active);
+  }
+
+  p.completed {
+    color: getThemedValue(light, TodoElement, text-completed);
+  }
+}
+
+.dark {
+  border-bottom: 1px solid getThemedValue(dark, TodoElement, separator);
+
+  p.active {
+    color: getThemedValue(dark, TodoElement, text-active);
+  }
+
+  p.completed {
+    color: getThemedValue(dark, TodoElement, text-completed);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .TodoElement {
+    flex: 0 0 $element-size-mobile;
+    font-size: 11px;
+    line-height: 11px;
+
+    button {
+      width: 24px;
+      height: 24px;
+      opacity: 1;
+
+      img {
+        height: 12px;
+      }
+    }
+  }
+}
