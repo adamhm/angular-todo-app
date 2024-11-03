@@ -1,0 +1,62 @@
+@import "../../styles/themify";
+@import "../../styles/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 $element-size * $max-visible-items;
+  margin-top: 22px;
+}
+
+.TodoList {
+  padding: 0;
+  flex: 0 0 $element-size * $max-visible-items;
+  display: flex;
+  flex-direction: column;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    border: transparent;
+  }
+
+  &.full :last-child .TodoElement {
+    border-bottom: none;
+  }
+}
+
+.light {
+  background-color: getThemedValue(light, TodoList, bg-color);
+  scrollbar-color: getThemedValue(light, TodoList, scrollbar-color);
+
+  &::-webkit-scrollbar-thumb {
+    background-color: getThemedValue(light, TodoList, scrollbar-bg);
+  }
+}
+
+.dark {
+  background-color: getThemedValue(dark, TodoList, bg-color);
+  scrollbar-color: getThemedValue(dark, TodoList, scrollbar-color);
+
+  &::-webkit-scrollbar-thumb {
+    background-color: getThemedValue(dark, TodoList, scrollbar-bg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .TodoList {
+    margin-top: 18px;
+    flex: 0 0 $element-size-mobile * $max-visible-items;
+  }
+}

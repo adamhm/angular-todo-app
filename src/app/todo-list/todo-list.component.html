@@ -1,0 +1,6 @@
+<ng-container *ngIf="todoService.filteredTodos$ | async as todos">
+  <ul class="TodoList" [class]="themeService.theme$ | async">
+    <app-todo-element *ngFor="let todo of todos; let last = last" [todo]="todo"
+      [class.noborder]="last && todos.length >= maxVisibleItems" />
+  </ul>
+</ng-container>
