@@ -1,0 +1,40 @@
+@import "../../styles/themify";
+
+.ListFilter {
+  label {
+    padding: 0 10px;
+    font-weight: bold;
+  }
+
+  input {
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  input:checked + label {
+    color: hsl(219, 71%, 57%);
+  }
+
+  form {
+    margin: 0 20px;
+  }
+
+  form:has(:focus-visible) {
+    border-radius: 2px;
+    outline: 2px solid black;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .light {
+    label:hover {
+      color: getThemedValue(light, ListFilter, text-hover);
+    }
+  }
+
+  .dark {
+    label:hover {
+      color: getThemedValue(dark, ListFilter, text-hover);
+    }
+  }
+}
