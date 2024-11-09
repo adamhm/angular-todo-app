@@ -1,0 +1,51 @@
+@import "../../styles/themify";
+
+:host {
+  margin-top: 35px;
+}
+
+.TextBox {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  border-radius: 6px;
+
+  [type="text"] {
+    height: 40px;
+    margin-right: 24px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    font-size: 18px;
+  }
+}
+
+.light {
+  background-color: getThemedValue(light, TextBox, bg-color);
+
+  [type="text"] {
+    background-color: getThemedValue(light, TextBox, bg-color);
+    color: getThemedValue(light, TextBox, text-color);
+  }
+}
+
+.dark {
+  background-color: getThemedValue(dark, TextBox, bg-color);
+
+  [type="text"] {
+    background-color: getThemedValue(dark, TextBox, bg-color);
+    color: getThemedValue(dark, TextBox, text-color);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .TextBox {
+    flex: 0 0 48px;
+    margin-top: 20px;
+
+    [type="text"] {
+      height: 24px;
+      font-size: 12px;
+    }
+  }
+}
