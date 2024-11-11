@@ -1,0 +1,11 @@
+<section class="ListFooter" [class]="themeService.theme$ | async">
+  <ng-container
+    *ngIf="{ todos: todoService.filteredTodos$ | async, filter: filterService.currentFilter$ | async } as data">
+    <p>{{ data?.todos?.length ?? 0 }} items left</p>
+    <!--FIXME: {!isMobileView && -->
+    <app-list-filter />
+    <button type="button" (click)="clearCompleted()" [disabled]="data.filter === 'active'">
+      Clear completed
+    </button>
+  </ng-container>
+</section>

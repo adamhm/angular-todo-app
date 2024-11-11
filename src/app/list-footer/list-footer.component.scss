@@ -1,0 +1,54 @@
+@import "../../styles/themify";
+
+:host {
+  display: flex;
+  flex: 1 1 50px;
+}
+
+.ListFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 50px;
+  padding: 0 24px;
+  border-radius: 0 0 6px 6px;
+  list-style: none;
+  font-size: 14px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.2);
+
+  & > button {
+    height: 21px;
+    background-color: white;
+    border: none;
+  }
+}
+
+.light {
+  background-color: getThemedValue(light, ListFooter, bg-color);
+  color: getThemedValue(light, ListFooter, text-color);
+  border-top: 1px solid getThemedValue(light, ListFooter, separator);
+
+  & > button {
+    background-color: getThemedValue(light, ListFooter, bg-color);
+    color: getThemedValue(light, ListFooter, text-color);
+
+    &:not(:disabled):hover {
+      color: getThemedValue(light, ListFooter, text-hover);
+    }
+  }
+}
+
+.dark {
+  background-color: getThemedValue(dark, ListFooter, bg-color);
+  color: getThemedValue(dark, ListFooter, text-color);
+  border-top: 1px solid getThemedValue(dark, ListFooter, separator);
+
+  & > button {
+    background-color: getThemedValue(dark, ListFooter, bg-color);
+    color: getThemedValue(dark, ListFooter, text-color);
+
+    &:not(:disabled):hover {
+      color: getThemedValue(dark, ListFooter, text-hover);
+    }
+  }
+}
