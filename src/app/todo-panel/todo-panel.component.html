@@ -1,0 +1,12 @@
+<article class="TodoPanel" [class]="themeService.theme$ | async">
+  <div>
+    <h1>TODO</h1>
+    <button type="button" aria-label="change theme" (click)="themeService.toggleTheme()">
+      <img *ngIf="(themeService.theme$ | async) === 'light'" src="/assets/icons/icon-moon.svg" alt="" />
+      <img *ngIf="(themeService.theme$ | async) === 'dark'" src="/assets/icons/icon-sun.svg" alt="" />
+    </button>
+  </div>
+  <app-textbox />
+  <app-todo-list />
+  <app-list-footer />
+</article>
