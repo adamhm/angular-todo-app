@@ -1,0 +1,31 @@
+@import "../styles/themify";
+
+:host {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-size: 100% 300px;
+}
+
+.dark {
+  background-color: getThemedValue(dark, App, bg-color);
+  background-image: getThemedValue(dark, App, bg-image);
+  background-repeat: no-repeat;
+}
+
+.light {
+  background-color: getThemedValue(light, App, bg-color);
+  background-image: getThemedValue(light, App, bg-image);
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    background-size: 100% 200px;
+  }
+}
