@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="allLabel" datatype="html">
+        <source>All</source>
+        <target>Alle</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/list-filter/list-filter.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="activeLabel" datatype="html">
+        <source>Active</source>
+        <target>Aktiv</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/list-filter/list-filter.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="completedLabel" datatype="html">
+        <source>Completed</source>
+        <target>Erledigt</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/list-filter/list-filter.component.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5343458028739101075" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {No items} =1 {1 item left} other {<x
+            id="INTERPOLATION" /> items left }}</source>
+        <target>{VAR_PLURAL, plural, =0 {Keine Aufgaben} =1 {1 Aufgabe übrig} other {<x
+            id="INTERPOLATION" /> Aufgaben übrig }}</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/list-footer/list-footer.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="remaining" datatype="html">
+        <source>
+          <x id="ICU"
+            equiv-text="{ data?.todos?.length ?? 0, plural, =0 {No items} =1 {1 item left} other {
+      {{data?.todos?.length }} items left }}"
+            xid="5940659246045403810" />
+        </source>
+        <target>
+          <x id="ICU"
+            equiv-text="{ data?.todos?.length ?? 0, plural, =0 {Keine Aufgaben} =1 {1 Aufgabe übrig} other {
+      {{data?.todos?.length }} Aufgaben übrig }}"
+            xid="5940659246045403810" />
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/list-footer/list-footer.component.html</context>
+          <context context-type="linenumber">5,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="clearButton" datatype="html">
+        <source> Clear completed </source>
+        <target>Alle erledigten löschen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/list-footer/list-footer.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="textbox.placeholder" datatype="html">
+        <source>Aufgabe hinzufügen...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/textbox/textbox.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
