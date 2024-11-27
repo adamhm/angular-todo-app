@@ -3,11 +3,11 @@
 <div class="ListFilter" [class]="themeService.theme$ | async">
   <form action="" aria-label="filter">
     <input type="radio" name="filter" id="all" [checked]="filter === 'all'" (click)="changeFilter('all')" />
-    <label for="all">All</label>
+    <label for="all" i18n="@@allLabel">All</label>
     <input type="radio" name="filter" id="active" [checked]="filter === 'active'" (click)="changeFilter('active')" />
-    <label for="active">Active</label>
+    <label for="active" i18n="@@activeLabel">Active</label>
     <input type="radio" name="filter" id="completed" [checked]="filter === 'completed'"
       (click)="changeFilter('completed')" />
-    <label for="completed">Completed</label>
+    <label for="completed" i18n="@@completedLabel">Completed</label>
   </form>
 </div>

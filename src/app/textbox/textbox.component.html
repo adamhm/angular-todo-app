@@ -1,4 +1,5 @@
 <div class="TextBox" [class]="themeService.theme$ | async">
   <app-checkbox [disabled]="true" />
-  <input #taskInput type="text" placeholder="Create a new todo..." (keydown.enter)="addTodo(taskInput.value)" />
+  <input #taskInput type="text" i18n-placeholder="@@textbox.placeholder" placeholder="Create a new todo..."
+    (keydown.enter)="addTodo(taskInput.value)" />
 </div>
